@@ -32,7 +32,28 @@
         const id = 1;
         const productName = 'Product Apple Watch';
         const rating = 5;
+
+        const product = {
+            id,
+            productName,
+            rating
+        };
+
+        console.log(product);
+
+        const product2 = {
+            description: "Product 2 description",
+            id,
+            rating,
+        };
+
+        // const getProductTwoDescription = product2.description;
+        // console.log(getProductTwoDescription);
         
+        //Destructuring 
+        const {description} = product2;
+        console.log(description);
+
     </script>
 </body>
 </html>
