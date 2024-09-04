@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Default Parameters and REST And Spread Operators </title>
+</head>
+<body>
+    <script>
+        // Default parameters, Spread and Rest Operators 
+        function mulOfTwoNumber(num1=1, num2=2){
+            console.log(num1, num2);
+            return num1 * num2;
+        }
+        console.log(mulOfTwoNumber(3));
+
+        // Spread Operator 
+        const array1 = [4, 7, 18];
+        const array2 = [2, 1, 7];
+
+        console.log(array1, array2);
+        console.log(999, ...array1, 90, ...array2, 10000);
+
+        // Rest Operator  
+        function restParam(a, b, ...rest){
+            console.log(a, b, rest);
+        }
+        console.log(restParam(1, 2, 3, 4, 5, 6, 7));
+
+    </script>
+</body>
+</html>
