@@ -1,0 +1,75 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Array Methods </title>
+</head>
+<body>
+    <script>
+        // map(), filter(), find(), some(), every(), includes(), indexOf(), findIndexOf()
+        const personInfo = [
+        {
+                name: 'Person01',
+                age: 30,
+                country: 'USA'
+            },
+            {
+                name: 'Person1',
+                age: 26,
+                country: 'India'
+            },
+            {
+                name: 'Person2',
+                age: 24,
+                country: 'USA'
+            },
+            {
+                name: 'Person3',
+                age: 24,
+                country: 'London'
+            }
+        ];
+
+        const getAllNames = personInfo.map((singlePerson, index) => {
+            console.log(singlePerson, index);
+            return `${singlePerson.name} age is ${singlePerson.age}`;
+        });
+
+        console.log(getAllNames);
+
+        // find()
+        let getPersonFromUSA = personInfo.find((singlePerson, index) => {
+            return singlePerson.country === 'USA';
+        });
+
+        console.log(getPersonFromUSA);
+
+        // filter() 
+        let getAllPersonsFromUSA = personInfo.filter((singlePerson, index) => {
+            return singlePerson.country === 'USA';
+        });
+        console.log(getAllPersonsFromUSA);
+
+        // some() 
+        let checkSomeArrayMethodWithExample = personInfo.some((singlePerson) => {
+            return singlePerson.age > 25;
+        });
+        console.log(checkSomeArrayMethodWithExample);
+
+        // every()
+        let checkEveryArrayMethodWithExample = personInfo.every((singlePerson) => {
+            return singlePerson.age > 30;
+        });
+        console.log(checkEveryArrayMethodWithExample);
+
+        // includes() and indexOf() 
+        const fruitsArray = ['apple', 'banana', 'cherry', 'sweet potato'];
+        console.log(fruitsArray.includes('cherry'), fruitsArray.indexOf('sweet potato'));
+
+        let getIndexOfPersonWhoIsFromRussia = personInfo.findIndex((singlePerson) => {
+            return singlePerson.country === 'India';
+        });
+        console.log(getIndexOfPersonWhoIsFromRussia);
+    </script>
+</body>
+</html>
