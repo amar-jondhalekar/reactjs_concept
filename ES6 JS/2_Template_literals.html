@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Template Literals </title>
+</head>
+<body>
+    <script>
+        let name = 'Amar';
+        let surname = 'Jondhalekar';
+
+        console.log(name + '' + surname, `${name} ${surname}`);
+
+        // Template Literals 
+        let showRecipeOne = true;
+
+        function getRecipeOne(recipeOne){
+            return recipeOne;
+        }
+        function getRecipeTwo(recipeOne){
+            return recipeOne;
+        }
+
+        if(showRecipeOne){
+            console.log(getRecipeOne('Pizza'));
+        }else{
+            console.log(getRecipeTwo('Coke'));
+        }
+
+        showRecipeOne ? console.log(getRecipeOne('Pizza')): console.log(getRecipeTwo('Coke'));
+
+        const id = 1;
+        const productName = 'Product Apple Watch';
+        const rating = 5;
+        
+    </script>
+</body>
+</html>
