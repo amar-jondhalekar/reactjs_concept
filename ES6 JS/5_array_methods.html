@@ -5,6 +5,7 @@
     <title> Array Methods </title>
 </head>
 <body>
+    <div class="list-of-products"></div>
     <script>
         // map(), filter(), find(), some(), every(), includes(), indexOf(), findIndexOf()
         const personInfo = [
@@ -70,6 +71,26 @@
             return singlePerson.country === 'India';
         });
         console.log(getIndexOfPersonWhoIsFromRussia);
+
+        let getListOfProductsEle = document.querySelector('.list-of-products');
+
+        function renderProducts(getProducts){
+            getListOfProductsEle.innerHTML = getProducts.map(singleProductItem => `<p>${singleProductItem.title}</p>`).join('');
+        } 
+        async function fetchListOfProducts() {
+            try{
+                const apiResponse = await fetch('https://dummyjson.com/products', {
+                    method: 'GET',
+                });
+                const result = await apiResponse.json();
+                // Assuming result.products is the array of products you want
+                renderProducts(result.products);
+            }catch(error){
+                console.log(error);
+            }
+        }
+
+        fetchListOfProducts();
     </script>
 </body>
 </html>
