@@ -1,4 +1,3 @@
-
 function FunctionalComponent() {
  return(
  <div>
