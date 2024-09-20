@@ -6,7 +6,7 @@ function ProductList({name, city, listOfProducts}){
     // console.log(props);
     // const {name, city} = props;
     return <div>
-        <h4> Ecomerce Product </h4>
+        <h4 className="title"> Ecomerce Product </h4>
         {/* {<ProductItem/>} */}
         <h4> Name is {name}, He/She is belongs to this city {city} </h4>
         <ul>
