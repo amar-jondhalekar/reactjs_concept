@@ -12,8 +12,8 @@ function App() {
     <>
       <div>
         <h1> React JS Concepts 2024 </h1>
-        <ClassBasedComponent/>
-        <FunctionalComponent/>
+        {/* <ClassBasedComponent/> */}
+        {/* <FunctionalComponent/> */}
         <ProductList listOfProducts={dummyProductData} name='Amar' city='Kolhapur'></ProductList>
       </div>
     </>
