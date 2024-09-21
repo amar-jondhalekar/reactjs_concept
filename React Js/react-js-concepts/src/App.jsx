@@ -5,6 +5,7 @@ import './App.css'
 import ClassBasedComponent from './components/class-based-component'
 import FunctionalComponent from './components/functional-component'
 import ProductList from './components/products'
+import Users from './components/products/components/users'
 
 function App() {
   const dummyProductData = ['Product 1', 'Product 2', 'Product 3'];
@@ -14,7 +15,8 @@ function App() {
         <h1> React JS Concepts 2024 </h1>
         {/* <ClassBasedComponent/> */}
         {/* <FunctionalComponent/> */}
-        <ProductList listOfProducts={dummyProductData} name='Amar' city='Kolhapur'></ProductList>
+        {/* <ProductList listOfProducts={dummyProductData} name='Amar' city='Kolhapur'></ProductList> */}
+        <Users/>
       </div>
     </>
   )

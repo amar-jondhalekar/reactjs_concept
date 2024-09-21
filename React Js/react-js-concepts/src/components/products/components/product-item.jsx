@@ -1,7 +1,7 @@
 import styles from './product-item.module.css'
 
 function ButtonComponent(){
-    console.log(styles);
+    // console.log(styles);
     return <button className={styles.buttonStyle}> Click </button>
 }
 
